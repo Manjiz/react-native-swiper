@@ -1,0 +1,31 @@
+{
+  "name": "@manjiz/react-native-swiper",
+  "version": "0.0.3",
+  "description": "Not the best Swiper component for React Native.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc --declaration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manjiz/react-native-swiper.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "swiper",
+    "react-native"
+  ],
+  "author": "Manjiz",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.3.1",
+    "react-native": "^0.55.4"
+  },
+  "devDependencies": {
+    "@types/react": "^16.3.1",
+    "@types/react-native": "^0.55.4",
+    "typescript": "^3.5.2"
+  }
+}
