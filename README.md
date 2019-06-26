@@ -3,12 +3,17 @@
 This swiper is modified based on [leecade/react-native-swiper](https://github.com/leecade/react-native-swiper). Not the best Swiper component for React Native.
 
 - Fixed some remained bugs.
+- Both iOS and android use ScrollView.
 - Removed some inessentials.
 - Used typescript.
 - Be Tested in one online project (lack of test...need more...)
 - Dependencies Versions:
   - react-native@^0.55.4
   - react@^16.3.1
+
+## Example
+
+- [Taro Components RN](https://github.com/NervJS/taro/blob/master/packages/taro-components-rn/src/components/Swiper/index.tsx)
 
 ## Installation
 
