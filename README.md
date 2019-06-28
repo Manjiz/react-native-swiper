@@ -141,3 +141,9 @@ Parameters:
 | animated | bool | true | offset index |
 
 ## Contribution
+
+### Local Development
+
+```bash
+rsync -avr ~/react-native-swiper/dist ~/MyApp/node_modules/@manjiz/react-native-swiper
+```
