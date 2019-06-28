@@ -2,9 +2,11 @@ import {
   StyleProp,
   ViewStyle,
   ScrollViewProps,
+  NativeSyntheticEvent,
+  NativeScrollEvent,
 } from 'react-native';
 
-export interface ReactNativeSwiperProps extends ScrollViewProps {
+export interface ReactNativeSwiperProps extends Omit<ScrollViewProps, 'onScrollBeginDrag' | 'onMomentumScrollEnd'> {
   children: any;
 
   containerStyle?: StyleProp<ViewStyle>;
@@ -12,7 +14,7 @@ export interface ReactNativeSwiperProps extends ScrollViewProps {
   // -> ScrollView.contentContainerStyle
   style?: StyleProp<ViewStyle>;
   // Custom styles will merge with the default styles.
-  paginationStyle?: ViewStyle;
+  paginationStyle?: StyleProp<ViewStyle>;
   // Allow custom the active-dot element.
   dotStyle?: StyleProp<ViewStyle>;
   // Allow custom the active-dot element.
@@ -39,17 +41,17 @@ export interface ReactNativeSwiperProps extends ScrollViewProps {
   // see loadMinimal
   loadMinimalSize?: number;
   // Custom loader to display when slides aren't loaded
-  loadMinimalLoader?: React.ReactNode;
+  loadMinimalLoader?: React.ReactElement;
 
   // Pagination
   // Set to true make pagination visible.
   showsPagination?: boolean;
   // Complete control how to render pagination with three params (index, total, context) ref to this.state.index / this.state.total / this, For example: show numbers instead of dots.
-  renderPagination?: (index: number, total: number, swiper: any) => JSX.Element;
+  renderPagination?: (index: number, total: number, swiper: any) => React.ReactElement;
   // Allow custom the dot element.
-  dot?: any;
+  dot?: React.ReactElement;
   // Allow custom the active-dot element.
-  activeDot?: any;
+  activeDot?: React.ReactElement;
   // Allow custom the active-dot element.
   dotColor?: string;
   // Allow custom the active-dot element.
@@ -63,9 +65,17 @@ export interface ReactNativeSwiperProps extends ScrollViewProps {
 
   // Supported ScrollResponder
   // When animation begins after letting up
-  onScrollBeginDrag?: any;
+  onScrollBeginDrag?: (
+    event: ScrollEventSim,
+    state: ReactNativeSwiperState,
+    swiper: any
+  ) => void;
   // Makes no sense why this occurs first during bounce
-  onMomentumScrollEnd?: any;
+  onMomentumScrollEnd?: (
+    e: ScrollEventSim,
+    state: ReactNativeSwiperState,
+    swiper: any
+  ) => void;
   // Immediately after onMomentumScrollEnd
   onTouchStartCapture?: any;
   // Same, but bubble phase

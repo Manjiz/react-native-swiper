@@ -237,10 +237,10 @@ export default class extends Component<ReactNativeSwiperProps, ReactNativeSwiper
   /**
    * Scroll begin handle
    */
-  onScrollBegin = (e?: ScrollEventSim) => {
+  onScrollBegin = (event: ScrollEventSim) => {
     const { onScrollBeginDrag = noop } = this.props
     this.scrolling = true
-    onScrollBeginDrag(e, this.fullState(), this)
+    onScrollBeginDrag(event, this.fullState(), this)
   }
 
   /**
@@ -386,7 +386,7 @@ export default class extends Component<ReactNativeSwiperProps, ReactNativeSwiper
     if (this.state.total <= 1) return null
 
     const dots = []
-    const ActiveDot = this.props.activeDot || (
+    const ActiveDot: React.ReactElement = this.props.activeDot || (
       <View
         style={[{
           backgroundColor: this.props.activeDotColor || '#007aff',
