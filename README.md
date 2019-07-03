@@ -27,6 +27,7 @@ This swiper is modified based on [leecade/react-native-swiper](https://github.co
 ## Example
 
 - [Taro Components RN](https://github.com/NervJS/taro/blob/master/packages/taro-components-rn/src/components/Swiper/index.tsx)
+  - 京東拼購 [iOS](https://apps.apple.com/us/app/%E4%BA%AC%E4%B8%9C%E6%8B%BC%E8%B4%AD-%E7%9C%81%E9%92%B1%E7%9C%81%E5%BF%83/id1453661340?from=groupmessage&isappinstalled=0) and android. The Swiper is locate in the index.
 
 ## Installation
 
