@@ -1,4 +1,17 @@
-# @manjiz/react-native-swiper
+<h1 align="center">
+  <a href="https://github.com/manjiz/react-native-swiper">
+    @manjiz/react-native-swiper
+  </a>
+</h1>
+
+<p align="center">
+  <a href="https://github.com/Manjiz/react-native-swiper/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="React Native Swiper is released under the MIT license." />
+  </a>
+  <a href="https://www.npmjs.com/package/@manjiz/react-native-swiper">
+    <img src="https://badge.fury.io/js/%40manjiz%2Freact-native-swiper.svg" alt="Current npm package version." />
+  </a>
+</p>
 
 This swiper is modified based on [leecade/react-native-swiper](https://github.com/leecade/react-native-swiper). Not the best Swiper component for React Native.
 
