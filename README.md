@@ -6,11 +6,23 @@
 
 <p align="center">
   <a href="https://github.com/Manjiz/react-native-swiper/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="React Native Swiper is released under the MIT license." />
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="React Native Swiper is released under the MIT license.">
   </a>
   <a href="https://www.npmjs.com/package/@manjiz/react-native-swiper">
-    <img src="https://badge.fury.io/js/%40manjiz%2Freact-native-swiper.svg" alt="Current npm package version." />
+    <img src="https://badge.fury.io/js/%40manjiz%2Freact-native-swiper.svg" alt="Current npm package version.">
   </a>
+  <a href="https://www.npmjs.com/package/@manjiz/react-native-swiper">
+    <img src="https://img.shields.io/npm/dw/@manjiz/react-native-swiper.svg" alt="Downloads.">
+  </a>
+</p>
+
+<h4 align="center">:point_right: Environmental Minimum Requirements :point_left:</h4>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/react--native-0.59.9-orange.svg">
+  <img src="https://img.shields.io/badge/react-16.8.3-orange.svg">
+  <img src="https://img.shields.io/badge/node-8.3-orange.svg">
+  <img src="https://img.shields.io/badge/iOS-9.0-orange.svg">
 </p>
 
 This swiper is modified based on [leecade/react-native-swiper](https://github.com/leecade/react-native-swiper). Not the best Swiper component for React Native.
@@ -20,9 +32,6 @@ This swiper is modified based on [leecade/react-native-swiper](https://github.co
 - Removed some inessentials.
 - Used typescript.
 - Be Tested in one online project (lack of test...need more...)
-- Dependencies Versions:
-  - react-native@^0.55.4
-  - react@^16.3.1
 
 ## Example
 
