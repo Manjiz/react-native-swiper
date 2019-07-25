@@ -1,6 +1,6 @@
 {
   "name": "@manjiz/react-native-swiper",
-  "version": "0.0.3",
+  "version": "0.1.3",
   "description": "Not the best Swiper component for React Native.",
   "main": "./dist/index.js",
   "scripts": {
