@@ -86,13 +86,6 @@ export interface ReactNativeSwiperProps extends Omit<ScrollViewProps, 'onScrollB
   onResponderRelease?: any;
 
   // ...ScrollViewProps
-  // pagingEnabled?: boolean;
-  // showsHorizontalScrollIndicator?: boolean;
-  // showsVerticalScrollIndicator?: boolean;
-  // bounces?: boolean;
-  // scrollsToTop?: boolean;
-  // removeClippedSubviews?: boolean;
-  // automaticallyAdjustContentInsets?: boolean;
   // scrollEnabled?: boolean;
 }
 

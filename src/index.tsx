@@ -13,7 +13,6 @@ import React, { Component } from 'react'
 import {
   View,
   ScrollView,
-  Dimensions,
   ActivityIndicator,
   LayoutChangeEvent,
   Platform,
@@ -71,11 +70,9 @@ export default class extends Component<ReactNativeSwiperProps, ReactNativeSwiper
       initState.pIndex = props.index as number
     }
 
-    const { width, height } = Dimensions.get('window')
-
     initState.dir = props.horizontal ? 'x' : 'y'
-    initState.width = props.width || state.width || width
-    initState.height = props.height || state.height || height
+    initState.width = props.width || state.width || 0
+    initState.height = props.height || state.height || 0
     initState.offset[initState.dir] = (initState.dir === 'x' ? initState.width : initState.height) * (props.index as number + (props.loop ? 1 : 0))
 
     return initState
@@ -91,6 +88,7 @@ export default class extends Component<ReactNativeSwiperProps, ReactNativeSwiper
     dir: 'x',
   }
 
+  hasDimension: boolean = false
   autoplayTimer: any
   loopJumpTimer: any
   autoScrolling: boolean = false
@@ -142,6 +140,13 @@ export default class extends Component<ReactNativeSwiperProps, ReactNativeSwiper
     const { width, total, height, dir } = this.state
     const offset: Offset = getOffset(dir, loop && total > 1 ? 1 : 0, width, height)
     this.realtimeOffset = offset
+    if (!this.hasDimension) {
+      // Initial contentSizeChange once equal container size
+      if (contentWidth && contentHeight && (dir === 'x' ? contentWidth : contentHeight) !== (dir === 'x' ? width : height)) {
+        this.hasDimension = true
+      }
+      return
+    }
     this.setState({ index: 0, offset }, () => {
       this.autoplay()
       // workaround-2: In android,
